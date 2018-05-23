@@ -1,1 +1,15 @@
-
+Package: BSgenome.Athaliana10.TAIR.TAIR10
+Title: Full genome sequences for Arabidopsis thaliana (TAIR10)
+Description: Full genome sequences for Arabidopsis thaliana as provided by TAIR (TAIR10 Genome Release).
+Version: 1.4.2
+organism: Arabidopsis thaliana
+common_name: Arabidopsis
+provider: TAIR
+provider_version: TAIR10
+release_date: November 17, 2010
+release_name: TAIR10 Genome Release
+source_url: ftp://ftp.arabidopsis.org/home/tair/Genes/TAIR10_genome_release/
+organism_biocview: Arabidopsis thaliana
+BSgenomeObjname: Athaliana10
+seqs_srcdir: C:/Users/Documents/R/win-library/3.3/BSgenome/extdata
+seqfile_name: athalianaTAIR10.2bit
