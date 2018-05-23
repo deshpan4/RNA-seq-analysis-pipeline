@@ -76,9 +76,7 @@ If the samples do not have biological replicates, then run the following script
 bash computeDGEusing_DESeq_edgeR_noReplicates.sh
 ```
 **Step-7:** Construct BSgenome package for A.thaliana TAIR10 data
-However, there is already BSgenome package availabe in CRAN 'BSgenome.Athaliana.TAIR.TAIR9', but we recommend users to construct TAIR10 version of BSgenome which can be constructed using following steps.
-
-Convert genome FASTA to 2bit
+However, there is already BSgenome package availabe in CRAN 'BSgenome.Athaliana.TAIR.TAIR9', but we recommend users to construct TAIR10 version of BSgenome. The FASTA genome file has already been converted to 2bit format (athalianaTAIR10.2bit) and is available in the "Genome" folder. However, if the user would like to convert the FASTA file to 2bit himself, "faToTwoBit" tool is required.
 ```
 faToTwoBit genome.fa athalianaTAIR10.2bit
 ```
