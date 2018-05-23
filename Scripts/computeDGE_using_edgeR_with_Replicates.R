@@ -1,0 +1,16 @@
+library(edgeR)
+counts<-read.csv("HTSeq-read-counts/sample-1-sample-2.txt",header=T,check.names=F)
+l=apply(counts,1,function(y){all(y==0)})
+f=counts[l,]
+m=match(row.names(f),row.names(counts))
+xx=counts[-m,]
+group <- factor(c(1,2,2))
+design <- model.matrix(~group)
+y <- DGEList(counts=xx,group=group)
+y <- calcNormFactors(y) 
+y <- estimateGLMCommonDisp(y,design) 
+y <- estimateGLMTrendedDisp(y,design) 
+y <- estimateGLMTagwiseDisp(y,design)
+fit <- glmFit(y,design)
+lrt <- glmLRT(fit,coef=2)
+write.csv(lrt$table,quote=FALSE,row.names=FALSE,"Sample-1-Sample-2-significant-padj-lessthan-0.05-edgeR-results-with-replicates.csv")
